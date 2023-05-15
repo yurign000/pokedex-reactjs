@@ -1,0 +1,59 @@
+.left-side{
+    display: flex;
+    flex-direction: column;
+    flex: 10;
+    align-self: flex-end;
+    height: 95%;
+}
+.out-of-screen{
+    display: flex;
+    border: solid 2px #700;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 100%;
+    background-color: white;
+    padding: 10%;
+    background-color: #f44;
+}
+.screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 10px;
+    border: solid 3px black;
+    background-color: #fff;
+}
+.pokemon-screen{
+    background-color: #666;
+    border: solid 2px #000;
+    border-top: solid 3px #000;
+    border-radius: 6px;
+    height: 80%;
+    width: 80%;
+    box-shadow: 2px -2px 5px inset #222, -2px 2px 5px inset #222;
+}
+.top-detail{
+    font-size: 10px;
+    margin-bottom: 5px;
+    word-spacing: 30px;
+}
+.bottom-detail{
+    display: flex;
+    width: 100%;
+    font-size: 15px;
+    justify-content: space-around;
+}
+
+.top-part{
+    background-color: #c22;
+    border-top: solid 2px #300;
+    border-left: solid 2px #300;
+    border-right: solid 2px #300;
+    height: 15%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 50%;
+    z-index: 4;
+    box-shadow: 0 3px 0 #822;
+}

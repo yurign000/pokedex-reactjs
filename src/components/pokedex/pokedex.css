@@ -1,0 +1,6 @@
+.pokedex{
+    display: flex;
+    flex-direction: row;
+    height: 75%;
+    width: 60%;
+}
