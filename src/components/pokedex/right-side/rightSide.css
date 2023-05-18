@@ -49,14 +49,17 @@
     justify-content: center;
     font-size: 150%;
     color: #0a0;
-    background-color: #2e2;
+    background-color: #2b2;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border-left:none;
     height: 108%;
     width: 23%;
     border: solid 3px #400;
-    /* margin-bottom: 1px; */
+}
+.menu-search .button:hover{
+    background-color: #0f0;
+    border: solid 3px #040;
 }
 .menu-history{
     height: 50%;

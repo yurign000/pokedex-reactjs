@@ -1,6 +1,7 @@
 import './leftSide.css'
 
-export default function LeftSide(){
+export default function LeftSide(props){
+
     return(
         <section className="left-side">
             <div className='top-part'>
@@ -11,8 +12,8 @@ export default function LeftSide(){
                     <span className="top-detail">🔴 🔴</span>
 
                     <div className="pokemon-screen">
-                        <img src=""/>
-                        <p className="name">{}</p>
+                        <p className="name">{props?.pokemon?.name}</p>
+                        <img src={props.pokemon?.sprites?.front_default || ''}></img>
                     </div>
                     
                     <div className="bottom-detail">

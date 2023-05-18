@@ -2,19 +2,17 @@ import "./rightSide.css"
 import { useState } from "react"
 import fetchApi from "../../../api"
 
-export default function LeftSide(){
+export default function LeftSide(props){
     const [inputValue, setInputValue] = useState();
-    const [pokemon, setPokemon] = useState();
+    // const [pokemon, setPokemon] = useState();
     const [searchHistory, setSearchHistory] = useState([]);
 
     const handlePokemon = ()=>{
-        fetchApi(inputValue,setPokemon,setSearchHistory,searchHistory);
+        fetchApi(inputValue,props.setPokemon,setSearchHistory,searchHistory);
     };
     const historyComponent = ()=>{
         const historyMap = searchHistory.map((search,i)=>
-            <>
-                <p key={search+i}>{search}</p>
-            </>
+            <p key={i}>{search}</p>
         )
         return historyMap;
     }

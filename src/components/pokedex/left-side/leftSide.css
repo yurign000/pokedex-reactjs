@@ -26,13 +26,26 @@
     background-color: #fff;
 }
 .pokemon-screen{
+    display: flex;
     background-color: #666;
+    flex-direction: column;
     border: solid 2px #000;
-    border-top: solid 3px #000;
     border-radius: 6px;
     height: 80%;
     width: 80%;
     box-shadow: 2px -2px 5px inset #222, -2px 2px 5px inset #222;
+    align-items: center;
+}
+.pokemon-screen p{
+    flex:1;
+    color: #fff;
+    font-size: 25px;
+    filter: drop-shadow(0 0 4px #fff);
+}
+img{
+    flex:10;
+    image-rendering: pixelated;
+    filter: drop-shadow(0 0 8px #fff);
 }
 .top-detail{
     font-size: 10px;
