@@ -4,15 +4,20 @@ import fetchApi from "../../../api"
 
 export default function LeftSide(props){
     const [inputValue, setInputValue] = useState();
-    // const [pokemon, setPokemon] = useState();
     const [searchHistory, setSearchHistory] = useState([]);
 
+    //OBTER POKEMON PESQUISADO
     const handlePokemon = ()=>{
         fetchApi(inputValue,props.setPokemon,setSearchHistory,searchHistory);
     };
+
+    //RETORNAR COMPONENTE CONTENDO O HISTORICO
     const historyComponent = ()=>{
         const historyMap = searchHistory.map((search,i)=>
-            <p key={i}>{search}</p>
+            <div key={i} onClick={()=>props.setPokemon(search)}>
+                <p>{search.name}</p>
+                <img className="img-history" src={search.sprites.front_default}/>
+            </div>
         )
         return historyMap;
     }

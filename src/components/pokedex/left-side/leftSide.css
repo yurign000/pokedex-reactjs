@@ -5,21 +5,39 @@
     align-self: flex-end;
     height: 95%;
 }
+.top-part{
+    display: flex;
+    background-color: #c22;
+    border-top: solid 2px #500;
+    border-left: solid 2px #500;
+    border-right: solid 2px #500;
+    height: 15%;
+    min-height: 15%;
+    max-height: 15%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 50%;
+    box-shadow: 10px 10px 10px #333, 0 0 5px inset #300; 
+}   
 .out-of-screen{
     display: flex;
     border: solid 2px #700;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-    height: 100%;
+    height: 85%;
+    max-height: 85%;
+    min-height: 85%;
+    box-sizing: border-box;
     background-color: white;
     padding: 10%;
     background-color: #f44;
+    box-shadow: 10px 10px 10px #333; 
 }
 .screen{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100%;
     width: 100%;
     border-radius: 10px;
     border: solid 3px black;
@@ -31,19 +49,24 @@
     flex-direction: column;
     border: solid 2px #000;
     border-radius: 6px;
-    height: 80%;
     width: 80%;
+    height: 80%;
+    max-height: 80%;
     box-shadow: 2px -2px 5px inset #222, -2px 2px 5px inset #222;
     align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 8px;
+    box-sizing: border-box;
 }
 .pokemon-screen p{
-    flex:1;
+    min-block-size: 0;
     color: #fff;
     font-size: 25px;
     filter: drop-shadow(0 0 4px #fff);
 }
-img{
-    flex:10;
+.img-screen{
+    width: 100%;
     image-rendering: pixelated;
     filter: drop-shadow(0 0 8px #fff);
 }
@@ -57,16 +80,4 @@ img{
     width: 100%;
     font-size: 15px;
     justify-content: space-around;
-}
-
-.top-part{
-    background-color: #c22;
-    border-top: solid 2px #300;
-    border-left: solid 2px #300;
-    border-right: solid 2px #300;
-    height: 15%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 50%;
-    z-index: 4;
-    box-shadow: 0 3px 0 #822;
 }

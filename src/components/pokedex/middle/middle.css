@@ -8,20 +8,5 @@
     border-radius: 10px;
     justify-content: space-between;
     flex: 1;
-    box-shadow: 6px 0 9px inset #a00, -6px 0 9px inset #a00;
+    box-shadow: 6px 0 9px inset #a00, -6px 0 9px inset #a00, 10px 10px 10px #333; ;
 }
-/* .middle div{
-    height: 10%;
-    border: solid 2px #700;
-    background-color: #c00;
-    margin: -1px;
-    box-shadow: 6px 0 9px inset #a00, -6px 0 9px inset #a00;
-}
-.middle .piece1{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-.middle .piece2{
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-} */

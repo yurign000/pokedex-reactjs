@@ -1,8 +1,7 @@
 import './App.css'
 import Pokedex from './components/pokedex/Pokedex'
 
-function App() {
-
+export default function App() {
   return (
     <>
       <div className='top-border'></div>
@@ -11,5 +10,3 @@ function App() {
     </>
   )
 }
-
-export default App

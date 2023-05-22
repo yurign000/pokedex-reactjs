@@ -1,3 +1,5 @@
+/* PARTE ESQUERDA DA POKEDEX */
+/* As  */
 .right-side{
     display: flex;
     align-self: end;
@@ -7,7 +9,9 @@
     background-color: #f44;
     border-radius: 10px;
     flex: 10;
+    box-shadow: 10px 10px 10px #333; 
 }
+
 .inner-part{
     display: flex;
     flex-direction: column;
@@ -68,7 +72,7 @@
     align-items: center;
     justify-content: space-evenly;
 }
-.menu-history .history-screen{
+.history-screen{
     display: flex;
     background-color: #599;
     flex-direction: column;
@@ -82,10 +86,34 @@
     border: solid 2px #000;
     border-radius: 6px;
     box-shadow: 2px -2px 5px inset #333, -2px 2px 5px inset #333;
-    overflow-y: hidden;
+    overflow-y: scroll; 
+    user-select:none;
 }
-.menu-history .history-screen p{
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 193, 193);
+    box-shadow: 0 0 3px inset #000;
+    border-radius: 10px;
+}
+.history-screen div{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.history-screen p{
     margin: 0;
     text-indent: 10px;
     color: #eee;
+    font-size: 130%;
+}
+.history-screen div:hover{
+    background-color: #333;
+}
+.img-history{
+    display: flex;
+    width: 22%;
 }

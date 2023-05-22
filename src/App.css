@@ -11,12 +11,13 @@
   align-items: center;
   justify-content: space-between;
 }
+
+/* BORDAS NA PARTE DE CIMA E DE BAIXO DA TELA */
 .top-border{
   height: 2%;
   width: 100%;
   background-color: #444;
   box-shadow: 0 10px #777, 0 20px #bbb;
-  
 }
 .bottom-border{
   height: 2%;
