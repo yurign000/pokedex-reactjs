@@ -1,7 +1,9 @@
 import './leftSide.css'
 
 export default function LeftSide(props){
-
+    const setDisplayVisible = ()=>{
+        return props?.pokemon ? {display:'flex'} : {display:'none'};
+    };
 
     return(
         <section className="left-side">
@@ -11,9 +13,17 @@ export default function LeftSide(props){
                 <div className='screen'>
                     <span className="top-detail">🔴 🔴</span>
 
+
                     <div className="pokemon-screen">
-                        <p className="name">{props?.pokemon?.name}</p>
-                        <img className='img-screen' src={props.pokemon?.sprites?.front_default}></img>
+                        <div className='shiny-button'>
+                            <button>💡</button>
+                        </div>
+                        <div className='name'>
+                            <p>{props?.pokemon?.name}</p>
+                        </div>
+                        <div className='img-screen'>
+                            <img src={props.pokemon?.sprites?.front_default}></img>
+                        </div>
                     </div>
                     
                     <div className="bottom-detail">

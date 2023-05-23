@@ -54,22 +54,49 @@
     max-height: 80%;
     box-shadow: 2px -2px 5px inset #222, -2px 2px 5px inset #222;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     overflow: hidden;
     padding: 8px;
     box-sizing: border-box;
 }
-.pokemon-screen p{
-    min-block-size: 0;
+.shiny-button{
+    display: flex;
+    width: 100%;
+}
+.shiny-button button{
+    border: none;
+    height:25px;
+    width: 25px;
+    background-color: transparent;
+    color: #fff;
+    filter: drop-shadow(0 0 4px #ff0);
+}
+.shiny-button button:hover{
+    filter: drop-shadow(0 0 3px #ff0);
+    box-shadow: 0 0 10px inset #ff0;
+    border-radius: 50%;
+}
+.name{
+    position: absolute;
+    display: flex;
+    height: 10%;
+}
+.name p{
+    margin: 0;
     color: #fff;
     font-size: 25px;
     filter: drop-shadow(0 0 4px #fff);
 }
 .img-screen{
-    width: 100%;
+    display:flex;
+    flex:10;
+}
+.img-screen img{
+    height: 100%;
     image-rendering: pixelated;
     filter: drop-shadow(0 0 8px #fff);
 }
+/* DETALHES FORA DA TELA */
 .top-detail{
     font-size: 10px;
     margin-bottom: 5px;
