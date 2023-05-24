@@ -58,6 +58,8 @@
     overflow: hidden;
     padding: 8px;
     box-sizing: border-box;
+    background-image: url(pokedex-background.jpg);
+    image-rendering: pixelated;
 }
 .shiny-button{
     display: flex;
@@ -70,6 +72,7 @@
     background-color: transparent;
     color: #fff;
     filter: drop-shadow(0 0 4px #ff0);
+    opacity: 80%;
 }
 .shiny-button button:hover{
     filter: drop-shadow(0 0 3px #ff0);
@@ -95,6 +98,9 @@
     height: 100%;
     image-rendering: pixelated;
     filter: drop-shadow(0 0 8px #fff);
+}
+.img-screen img:hover{
+    filter: drop-shadow(0 0 15px #000)
 }
 /* DETALHES FORA DA TELA */
 .top-detail{
