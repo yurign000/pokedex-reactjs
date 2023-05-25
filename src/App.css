@@ -11,6 +11,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: #bbb;
+  background-image: url(background.jpg);
 }
 
 /* BORDAS NA PARTE DE CIMA E DE BAIXO DA TELA */
@@ -18,11 +19,11 @@
   height: 1%;
   width: 100%;
   background-color: #222;
-  box-shadow: 0 6px #444, 0 12px #666;
+  box-shadow: 0 5px #444, 0 10px #666;
 }
 .bottom-border{
   height: 1%;
   width: 100%;
   background-color: #222;
-  box-shadow: 0 -6px #444, 0 -12px #666;
+  box-shadow: 0 -5px #444, 0 -10px #666;
 }

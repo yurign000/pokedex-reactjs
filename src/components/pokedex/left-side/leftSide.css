@@ -59,11 +59,17 @@
     padding: 8px;
     box-sizing: border-box;
     background-image: url(pokedex-background.jpg);
+    background-size: auto 100%;
     image-rendering: pixelated;
 }
 .shiny-button{
     display: flex;
     width: 100%;
+}
+.gender-button{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
 }
 .shiny-button button{
     border: none;
@@ -72,6 +78,16 @@
     background-color: transparent;
     color: #fff;
     filter: drop-shadow(0 0 4px #ff0);
+    opacity: 80%;
+}
+.gender-button button{
+    border: none;
+    height:25px;
+    width: 25px;
+    background-color: transparent;
+    color: #000;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 4px #000);
     opacity: 80%;
 }
 .shiny-button button:hover{

@@ -1,5 +1,7 @@
 import { useState,useEffect } from 'react';
-import './leftSide.css'
+import onLamp from 'on-lamp.png';
+import offLamp from 'off-lamp.png';
+import './leftSide.css';
 
 export default function LeftSide(props){
     const [sprite, setSprite] = useState();
@@ -46,13 +48,16 @@ export default function LeftSide(props){
 
                     <div className="pokemon-screen">
                         <div className='shiny-button' style={setDisplayVisible()}>
-                            <button onClick={()=>handleIsShiny()}>💡</button>
+                            <button onClick={()=>handleIsShiny()} style={{backgroundImage:offLamp}}></button>
                         </div>
                         <div className='name'>
                             <p>{props?.pokemon?.name}</p>
                         </div>
                         <div className='img-screen'>
                             <img src={sprite} onClick={()=>handleIsMale()}></img>
+                        </div>
+                        <div className='gender-button' style={setDisplayVisible()}>
+                            <button onClick={()=>handleIsShiny()}>♂</button>
                         </div>
                     </div>
                     
