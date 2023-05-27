@@ -2,11 +2,13 @@
     display: flex;
     align-self: end;
     height: 80%;
-    flex-direction: column;
     border: solid 2px #700;
     background-color: #f33;
     border-radius: 10px;
-    justify-content: space-between;
     flex: 1;
-    box-shadow: 6px 0 9px inset #a00, -6px 0 9px inset #a00, 10px 10px 10px #333; ;
+    box-shadow: 
+        6px 0 9px inset #a00, 
+        -6px 0 9px inset #a00, 
+        10px 10px 10px #111
+    ; 
 }

@@ -8,10 +8,10 @@ export default function fetchApi(search,setPokemon,setSearchHistory,searchHistor
             let newHistory = [...searchHistory]; //HISTÓRICO DE PESQUISA ATUALIZADO
 
             setPokemon(pokemon);
-            newHistory.push(pokemon);
+            newHistory.unshift(pokemon);
 
             //LIMITAR HISTÓRICO ATÉ 9 POKEMONS
-            if(newHistory.length>9) newHistory.shift(); 
+            if(newHistory.length>10) newHistory.pop(); 
 
             setSearchHistory(newHistory);
     });

@@ -1,6 +1,4 @@
 import { useState,useEffect } from 'react';
-import onLamp from 'on-lamp.png';
-import offLamp from 'off-lamp.png';
 import './leftSide.css';
 
 export default function LeftSide(props){
@@ -8,6 +6,24 @@ export default function LeftSide(props){
     const [isShiny, setIsShiny] = useState(false);
     const [isMale, setIsMale] = useState(true);
 
+    // ATUALIZAR SPRITES E ICONES DOS BOTÕES
+    useEffect(()=>{
+        if(props.pokemon){
+            // OBTER BOTÃO SHINY
+            let sStyle = document.querySelector('.shiny-button div').style;
+
+           // ADICIONAR BOTÃO DE GÊNERO CASO HAJA POKEMON FÊMEA
+            defineFemaleSpriteButton()
+            
+            // APLICAR STYLE FILTER NO BOTÃO SHINY
+            isShiny ? sStyle.filter = 'drop-shadow(1px 1px 1px #222)' : sStyle.filter = '';
+
+            // DEFINIR NOVA SPRITE
+            setSprite(props.pokemon.sprites[spriteIndex()]);
+        }
+    },[props.pokemon,isMale,isShiny])
+
+    // OBTER O INDEX DA SPRITE ATUAL
     const spriteIndex = ()=>{
         if(!isShiny && isMale)  return 'front_default';
         if(isShiny  && isMale)  return 'front_shiny';
@@ -15,52 +31,80 @@ export default function LeftSide(props){
         else                    return 'front_shiny_female';
     }
 
+    // ADICIONAR BOTÃO DE GÊNERO
+    const defineFemaleSpriteButton = ()=>{
+        
+        // OBTER BOTÃO GÊNERO
+        let btGender = document.querySelector('.gender-button div');
+        let gClass = btGender.classList;
+        let gStyle = btGender.style;
+
+        // VERIFICA SE O POKEMON POSSUI SPRITE FÊMEA
+        if(props.pokemon.sprites.front_female)
+        {
+
+            // MOSTRAR BOTÃO GÊNERO CASO O POKEMON POSSUA SPRITE FÊMEA
+            // APLICAR style.filter NO BOTÃO GÊNERO
+            gClass.add('female-exist');
+          
+            if(!isMale) gStyle.filter = 'hue-rotate(50deg) brightness(200%) drop-shadow(-1px 1px 0px)'
+            else        gStyle.filter = 'drop-shadow(1px 1px 1px #fff)';
+
+            return true;   
+        }
+        // CASO CONTRÁRIO
+        gClass.remove('female-exist')
+        setIsMale(true);
+        return false;
+    }
+
+    // MOSTRAR BOTÕES APENAS SE HOUVER UM POKEMON NA TELA
+    // ATIVAR DISPLAY CASO HAJA
     const setDisplayVisible = ()=>{
         return props?.pokemon ? {display:'flex'} : {display:'none'};
     };
 
+    // INVERTER BOLEANO DE isShiny e isMale
     const handleIsShiny = ()=>{
         setIsShiny(!isShiny);
     }
     const handleIsMale = ()=>{
         setIsMale(!isMale);
     }
-
-    useEffect(()=>{
-        if(props.pokemon){
-            if(props.pokemon.sprites[spriteIndex()] == null){
-                setIsMale(true);
-                console.log('sem versão feminina')
-            }
-
-            setSprite(props.pokemon.sprites[spriteIndex()]);
-        }
-    },[props.pokemon,isMale,isShiny])
         
+    // ------------------------------------------------------------------
     return(
         <section className="left-side">
+            {/* PARTE SUPERIOR, APENAS DETALHE */}
             <div className='top-part'></div>
 
-            <div className="out-of-screen">
-                <div className='screen'>
+            {/* MOLDURA DA POKEDEX */}
+            <div className="frame">
+                {/* PARTE BRANCA AO REDOR DA TELA */}
+                <div className='screen-frame'>
+                    {/* APENAS DETALHES */}
                     <span className="top-detail">🔴 🔴</span>
 
-
+                    {/* TELA DA POKEDEX */}
                     <div className="pokemon-screen">
+                        {/* BOTÃO DE SHINY */}
                         <div className='shiny-button' style={setDisplayVisible()}>
-                            <button onClick={()=>handleIsShiny()} style={{backgroundImage:offLamp}}></button>
+                            <div onClick={()=>handleIsShiny()}></div>
                         </div>
+                        {/* NOME DO POKEMON */}
                         <div className='name'>
                             <p>{props?.pokemon?.name}</p>
                         </div>
+                        {/* IMAGEM DO POKEMON */}
                         <div className='img-screen'>
-                            <img src={sprite} onClick={()=>handleIsMale()}></img>
+                            <img src={sprite}></img>
                         </div>
+                        {/* BOTÃO DE GÊNERO */}
                         <div className='gender-button' style={setDisplayVisible()}>
-                            <button onClick={()=>handleIsShiny()}>♂</button>
+                            <div onClick={()=>handleIsMale()}></div>
                         </div>
                     </div>
-                    
+                    {/* APENAS DETALHES */}
                     <div className="bottom-detail">
                         <span>☰</span>
                         <span>☰</span>

@@ -1,10 +1,8 @@
 import "./middle.css"
 
+// MEIO DA POKEDEX, APENAS DETALHE
 export default function LeftSide(){
     return(
-        <div className="middle">
-            <div className="piece1"></div>
-            <div className="piece2"></div>
-        </div>  
+        <div className="middle"></div>  
     )
 }

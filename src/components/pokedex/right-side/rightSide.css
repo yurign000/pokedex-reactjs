@@ -4,12 +4,11 @@
     display: flex;
     align-self: end;
     height: 80%;
-    display: flex;
     border: solid 2px #700;
     background-color: #f44;
     border-radius: 10px;
     flex: 10;
-    box-shadow: 10px 10px 10px #333; 
+    box-shadow: 10px 10px 10px #111; 
 }
 
 .inner-part{
@@ -30,20 +29,20 @@
     ;
 }
 .menu-search{
-    height: 10%;
     display: flex;
     align-items: center;
-    width: 80%;
     justify-content: space-between;    
+    height: 10%;
+    width: 80%;
 }
 .menu-search input{
     display: flex;
+    border: solid 3px #400;
+    border-right: none;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     height: 100%;
     width: 77%;
-    border: solid 3px #400;
-    border-right: none;
     text-indent: 10px;
     font-size: 17px;
 }
@@ -54,41 +53,39 @@
     font-size: 150%;
     color: #0a0;
     background-color: #2b2;
+    border: solid 3px #400;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    border-left:none;
     height: 108%;
     width: 23%;
-    border: solid 3px #400;
 }
 .menu-search .button:hover{
     background-color: #0f0;
     border: solid 3px #040;
 }
 .menu-history{
-    height: 50%;
     display: flex;
-    width: 80%;
     align-items: center;
-    justify-content: space-evenly;
+    height: 50%;
+    width: 80%;
 }
 .history-screen{
     display: flex;
-    background-color: #599;
     flex-direction: column;
-    border: solid 3px #244;
-    box-shadow: 2px -2px 10px inset #333, -2px 2px 10px inset #333;
-    border-radius: 5px;
-    padding-top: 5px;
-    height: 100%;
-    width: 100%;
-    background-color: #666;
-    border: solid 2px #000;
-    border-radius: 6px;
-    box-shadow: 2px -2px 5px inset #333, -2px 2px 5px inset #333;
+    background-color: #599;
     overflow-y: scroll; 
     overflow-x: hidden;
     user-select:none;
+    border: solid 2px #000;
+    border-radius: 6px;
+    padding-top: 5px;
+    height: 100%;
+    width: 100%;
+    background-image: url(../../../assets/pokedex-screen.jpg);
+    box-shadow: 
+        2px -2px 5px inset #333, 
+        -2px 2px 5px inset #333
+    ;
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -108,13 +105,14 @@
 .history-screen p{
     margin: 0;
     text-indent: 10px;
-    color: #eee;
     font-size: 130%;
+    filter: drop-shadow(0 0 2px #ddd);
 }
 .history-screen div:hover{
-    background-color: #333;
+    background-color: rgba(53, 53, 53, 0.521);
 }
 .img-history{
     display: flex;
     width: 22%;
+    filter: drop-shadow(0 0 1px #fff);
 }

@@ -1,9 +1,18 @@
 .pokedex{
     display: flex;
     flex-direction: row;
-    height: 75%;
-    width: 60%;
 }
 p::first-letter{
     text-transform: capitalize;
+}
+.bibliografy{
+    position: absolute;
+    bottom: 0;
+    margin: 15px;
+    right: 0;
+    color: #fff;
+}
+.bibliografy a{
+    text-decoration: none;
+    color: #0ff;
 }
