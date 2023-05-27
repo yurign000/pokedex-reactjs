@@ -41,10 +41,12 @@
     border-right: none;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    height: 100%;
+    height: 108%;
     width: 77%;
     text-indent: 10px;
     font-size: 17px;
+    margin: 0;
+    padding: 0;
 }
 .menu-search .button{
     display: flex;

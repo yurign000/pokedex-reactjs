@@ -8,7 +8,8 @@ export default function LeftSide(props){
 
     //OBTER POKEMON PESQUISADO
     const handlePokemon = ()=>{
-        fetchApi(inputValue,props.setPokemon,setSearchHistory,searchHistory);
+        if(inputValue)
+            fetchApi(inputValue,props.setPokemon,setSearchHistory,searchHistory);
     };
 
     //RETORNAR COMPONENTE CONTENDO O HISTÓRICO DE PESQUISA
@@ -35,6 +36,7 @@ export default function LeftSide(props){
                         placeholder="Pesquisar" 
                         type="text" 
                         onChange={(e)=>setInputValue(e.target.value)}
+                        onKeyUp={(k)=>{if(k.key == 'Enter')handlePokemon()}}
                     />
                     <div className="button" onClick={()=>handlePokemon()}></div>
                 </div>
