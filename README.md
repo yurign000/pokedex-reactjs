@@ -1,5 +1,5 @@
 # pokedex-reactjs
-Pokedex application to search for pokemons
+Pokedex application to search for pokemon
 
 Run with:
 - npm i
